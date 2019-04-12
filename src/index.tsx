@@ -1,14 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
 import Counter from "./Counter";
 import "./index.css";
-import reducer from "./reducers";
 import * as serviceWorker from "./serviceWorker";
-
-const store = createStore(reducer);
-const action = (type: string) => store.dispatch({ type });
+import { store } from "./store";
 
 ReactDOM.render(
   <Provider store={store}>
